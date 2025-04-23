@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header -->
+    <header class="flex flex-wrap justify-between items-center max-w-7xl mx-auto p-6">
+        <div class="text-3xl font-extrabold text-green-600">
+            <a href="/">VMBlog</a>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-gray-700 text-base font-medium">
+            <a href="#" class="hover:text-green-600 transition">Community</a>
+            <a href="#" class="hover:text-green-600 transition">Podcasts</a>
+            <a href="#" class="hover:text-green-600 transition">Courses</a>
+            <a href="#" class="hover:text-green-600 transition">Learn</a>
+            <a href="#" class="hover:text-green-600 transition">Tools</a>
+        </nav>
+        <div class="text-sm text-gray-600">
+            <!-- <button class="hover:text-green-600 transition"></button> -->
+            <a href="/login" class="hover:text-green-600 transition">LOGIN</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main
+        class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-14 items-center md:flex-row flex-col-reverse">
+        <!-- Image Section -->
+        <div class="relative flex justify-center">
+            <div class="rounded-xl overflow-hidden w-4/5 sm:w-3/4 md:max-w-[420px]">
+                <img src="../blog3.svg" alt="People" class="object-cover w-full h-auto">
+            </div>
+        </div>
+
+
+        <!-- Text Content -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-800">
+                Turn Your Passion into a Blog that Thrives
+            </h1>
+            <p class="mt-6 text-gray-600 text-lg leading-relaxed">
+                We help aspiring bloggers build successful online platforms with proven strategies, content ideas, and
+                monetization tips. Start your journey with us today.
+            </p>
+            <form class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="/all-blogs"
+                    class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition">See all blogs</a>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

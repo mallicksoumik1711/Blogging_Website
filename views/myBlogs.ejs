@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 px-4 py-6">
+
+    <div class="max-w-4xl mx-auto w-full">
+        <h1 class="text-3xl font-bold text-gray-600 mb-6 text-center">Welcome <%= user.username %>
+        </h1>
+        <h1 class="text-sm text-gray-800 mb-6">My Blog Posts</h1>
+
+        <% if (myPosts.length===0) { %>
+            <p class="text-gray-500">You haven't posted anything yet.</p>
+            <% } %>
+
+                <% myPosts.forEach(post=> { %>
+                    <div class="bg-white p-6 rounded-lg shadow mb-4 border border-gray-200">
+                        <h2 class="text-xl font-semibold text-gray-800 break-words">
+                            <%= post.title %>
+                        </h2>
+                        <p class="text-gray-700 mt-2 mb-4 break-words">
+                            <%= post.content %>
+                        </p>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="/edit/<%= post._id %>" class="text-blue-600 hover:underline">Edit</a>
+                            <form action="/delete/<%= post._id %>" method="POST"
+                                onsubmit="return confirm('Delete this post?')">
+                                <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
+
+                        <div class="flex">
+                            <a href="/all-blogs"
+                                class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow transition duration-300">
+                                See all Blogs
+                            </a>
+                        </div>
+    </div>
+
+</body>
+
+</html>
