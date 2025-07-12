@@ -25,7 +25,7 @@ npm install
 ### 3. Port Number
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/blogApp
-JWT_SECRET=shhhhhhhhhhhhhhhhhhhhh
+JWT_SECRET=shhhhhhhhhhhhhhhhhhhhh (haha)
 
 ### 4. Start the application
 node app.js
